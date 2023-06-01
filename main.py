@@ -1,5 +1,9 @@
 from player import *
+from schoolYard import *
 
-human = HumanPlayer("Bob")
 
-print(human.choose_gesture())
+game = Rpsls
+game.self.run_game()
+
+
+
