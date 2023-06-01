@@ -1,9 +1,5 @@
-from player import *
 from schoolYard import *
+gestures = ["rock", "paper", "scissors", "lizard", "spock"]
 
-
-game = Rpsls
-game.self.run_game()
-
-
-
+game = Rpsls()
+game.run_game()

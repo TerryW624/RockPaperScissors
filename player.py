@@ -3,13 +3,13 @@ from random import choice
 gestures = ["rock", "paper", "scissors", "lizard", "spock"]
 
 class Player:
-    def __init__(self):
-        self.name = ''
+    def __init__(self,name):
+        self.name = name
         self.score = 0
 
 class HumanPlayer(Player):
-    def __init__(self, name):
-        super().__init__(name)
+    def __init__(self):
+        super().__init__(__name__)
 
     def choose_gesture(self):
         while True:
@@ -25,4 +25,5 @@ class ComputerPlayer(Player):
         super().__init__(name)
     
     def choose_gesture(self):
-        choice(gestures)
+        comp_choice = choice(gestures)
+        return comp_choice
