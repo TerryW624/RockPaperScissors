@@ -4,19 +4,15 @@ class Gesture:
     def __init__(self, name):
         self.name = name
 
-        # if gestures.index(gesture1) - gestures.index(gesture2) == 2 or gestures.index(gesture1) - gestures.index(gesture2) == 4:
-        #     print(f"{player_1.name} wins")
-        
-        # elif gestures.index(gesture1) - gestures.index(gesture2) == -1 or gestures.index(gesture1) - gestures.index(gesture2) == -3:
-        #     print(f"{player_1.name} wins")
-
-        # elif gestures.index(gesture1) == gestures.index(gesture2):
-        #     print("Tied")
-
-        # else:
-        #     print(f"{player_2.name} wins")
-         
-
+    def decide_win_or_lose(self, gestures, gesture1, gesture2, player_1, player_2):
+        if gestures.index(gesture1) - gestures.index(gesture2) == 2 or gestures.index(gesture1) - gestures.index(gesture2) == 4:
+            return player_1.name  
+        elif gestures.index(gesture1) - gestures.index(gesture2) == -1 or gestures.index(gesture1) - gestures.index(gesture2) == -3:
+            return player_1.name
+        elif gestures.index(gesture1) == gestures.index(gesture2):
+            return "tied"
+        else:
+            return player_2.name
 
 class Rock(Gesture):
     def __init__(self, name):

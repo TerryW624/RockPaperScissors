@@ -9,7 +9,10 @@ scissors = Scissors("scissors")
 lizard = Lizard("lizard")
 spock = Spock("spock")
 
-gestures = [rock.name, paper.name, scissors.name, lizard.name, spock.name]
+#Sequential logic was used to create the destures list
+#Moving the objects out of order will break the logic of the game and result in false positives. 
+
+gestures = [scissors.name, paper.name, rock.name, lizard.name, spock.name]
 
 class Player:
     def __init__(self,name):
