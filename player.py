@@ -1,7 +1,15 @@
 from random import choice
+from sandbox import *
 import time
 
-gestures = ["rock", "paper", "scissors", "lizard", "spock"]
+
+rock = Rock("rock")
+paper = Paper("paper")
+scissors = Scissors("scissors")
+lizard = Lizard("lizard")
+spock = Spock("spock")
+
+gestures = [rock.name, paper.name, scissors.name, lizard.name, spock.name]
 
 class Player:
     def __init__(self,name):
@@ -15,7 +23,7 @@ class HumanPlayer(Player):
     def choose_gesture(self):
         while True:
             timer(.5)
-            choice = input(f"{self.name} what gesture do you would you like?\n{gestures} > ")
+            choice = input(f"{self.name} what gesture would you like?\n{gestures} > ")
             if choice.lower() in gestures:
                 timer(.5)
                 return choice.lower()
